@@ -1,0 +1,1463 @@
+<PAMDataset>
+  <Metadata>
+    <MDI key="ABSTRACT">OGC Web Feature Service developed by Cadcorp</MDI>
+    <MDI key="PROVIDER_NAME">Computer Aided Development Corporation Limited (Cadcorp)</MDI>
+    <MDI key="TITLE">Cadcorp GeognoSIS OGC Web Feature Service</MDI>
+  </Metadata>
+  <Metadata domain="xml:capabilities" format="xml">
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+    <!--{     "Licence Number": "733542",     "Licence To": "Clackmannanshire Council",     "Locked To": "DF_*17UN8NC282HJKEY" }-->
+    <WFS_Capabilities version="2.0.0" xmlns="http://www.opengis.net/wfs/2.0" xmlns:fes="http://www.opengis.net/fes/2.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns="http://clacksc/ns" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wfs/2.0 https://clacks.cloud.cadcorp.com/WFS91/wfs.exe?GetSchema&amp;name=OGC/wfs/2.0/wfs.xsd http://www.opengis.net/gml/3.2 https://clacks.cloud.cadcorp.com/WFS91/wfs.exe?GetSchema&amp;name=OGC/gml/3.2.1/gml.xsd http://www.opengis.net/fes/2.0 https://clacks.cloud.cadcorp.com/WFS91/wfs.exe?GetSchema&amp;name=OGC/filter/2.0/filterAll.xsd http://www.opengis.net/ows/1.1 https://clacks.cloud.cadcorp.com/WFS91/wfs.exe?GetSchema&amp;name=OGC/common/1.1.0/owsAll.xsd">
+      <ows:ServiceIdentification>
+        <ows:Title>Cadcorp GeognoSIS OGC Web Feature Service</ows:Title>
+        <ows:Abstract>OGC Web Feature Service developed by Cadcorp</ows:Abstract>
+        <ows:ServiceType>WFS</ows:ServiceType>
+        <ows:ServiceTypeVersion>2.0.0</ows:ServiceTypeVersion>
+        <ows:ServiceTypeVersion>1.0.0</ows:ServiceTypeVersion>
+      </ows:ServiceIdentification>
+      <ows:ServiceProvider>
+        <ows:ProviderName>Computer Aided Development Corporation Limited (Cadcorp)</ows:ProviderName>
+        <ows:ServiceContact>
+          <ows:ContactInfo>
+            <ows:Phone />
+            <ows:Address />
+          </ows:ContactInfo>
+        </ows:ServiceContact>
+      </ows:ServiceProvider>
+      <ows:OperationsMetadata>
+        <ows:Operation name="GetCapabilities">
+          <ows:DCP>
+            <ows:HTTP>
+              <ows:Get xlink:href="https://clacks.cloud.cadcorp.com/WFS91/wfs.exe?" />
+              <ows:Post xlink:href="https://clacks.cloud.cadcorp.com/WFS91/wfs.exe" />
+            </ows:HTTP>
+          </ows:DCP>
+          <ows:Parameter name="AcceptVersions">
+            <ows:AllowedValues>
+              <ows:Value>2.0.0</ows:Value>
+              <ows:Value>1.0.0</ows:Value>
+            </ows:AllowedValues>
+          </ows:Parameter>
+        </ows:Operation>
+        <ows:Operation name="DescribeFeatureType">
+          <ows:DCP>
+            <ows:HTTP>
+              <ows:Get xlink:href="https://clacks.cloud.cadcorp.com/WFS91/wfs.exe?" />
+              <ows:Post xlink:href="https://clacks.cloud.cadcorp.com/WFS91/wfs.exe" />
+            </ows:HTTP>
+          </ows:DCP>
+        </ows:Operation>
+        <ows:Operation name="GetFeature">
+          <ows:DCP>
+            <ows:HTTP>
+              <ows:Get xlink:href="https://clacks.cloud.cadcorp.com/WFS91/wfs.exe?" />
+              <ows:Post xlink:href="https://clacks.cloud.cadcorp.com/WFS91/wfs.exe" />
+            </ows:HTTP>
+          </ows:DCP>
+          <ows:Parameter name="outputFormat">
+            <ows:AllowedValues>
+              <ows:Value>application/gml+xml; version=3.2</ows:Value>
+              <ows:Value>application/gml+xml; version=2.1</ows:Value>
+              <ows:Value>GML2</ows:Value>
+              <ows:Value>application/geo+json</ows:Value>
+            </ows:AllowedValues>
+          </ows:Parameter>
+        </ows:Operation>
+        <ows:Operation name="GetPropertyValue">
+          <ows:DCP>
+            <ows:HTTP>
+              <ows:Get xlink:href="https://clacks.cloud.cadcorp.com/WFS91/wfs.exe?" />
+              <ows:Post xlink:href="https://clacks.cloud.cadcorp.com/WFS91/wfs.exe" />
+            </ows:HTTP>
+          </ows:DCP>
+        </ows:Operation>
+        <ows:Operation name="DescribeStoredQueries">
+          <ows:DCP>
+            <ows:HTTP>
+              <ows:Get xlink:href="https://clacks.cloud.cadcorp.com/WFS91/wfs.exe?" />
+              <ows:Post xlink:href="https://clacks.cloud.cadcorp.com/WFS91/wfs.exe" />
+            </ows:HTTP>
+          </ows:DCP>
+        </ows:Operation>
+        <ows:Operation name="ListStoredQueries">
+          <ows:DCP>
+            <ows:HTTP>
+              <ows:Get xlink:href="https://clacks.cloud.cadcorp.com/WFS91/wfs.exe?" />
+              <ows:Post xlink:href="https://clacks.cloud.cadcorp.com/WFS91/wfs.exe" />
+            </ows:HTTP>
+          </ows:DCP>
+        </ows:Operation>
+        <ows:Parameter name="version">
+          <ows:AllowedValues>
+            <ows:Value>2.0.0</ows:Value>
+          </ows:AllowedValues>
+        </ows:Parameter>
+        <ows:Constraint name="ImplementsBasicWFS">
+          <ows:NoValues />
+          <ows:DefaultValue>true</ows:DefaultValue>
+        </ows:Constraint>
+        <ows:Constraint name="ImplementsTransactionalWFS">
+          <ows:NoValues />
+          <ows:DefaultValue>false</ows:DefaultValue>
+        </ows:Constraint>
+        <ows:Constraint name="ImplementsLockingWFS">
+          <ows:NoValues />
+          <ows:DefaultValue>false</ows:DefaultValue>
+        </ows:Constraint>
+        <ows:Constraint name="KVPEncoding">
+          <ows:NoValues />
+          <ows:DefaultValue>true</ows:DefaultValue>
+        </ows:Constraint>
+        <ows:Constraint name="XMLEncoding">
+          <ows:NoValues />
+          <ows:DefaultValue>true</ows:DefaultValue>
+        </ows:Constraint>
+        <ows:Constraint name="SOAPEncoding">
+          <ows:NoValues />
+          <ows:DefaultValue>true</ows:DefaultValue>
+        </ows:Constraint>
+        <ows:Constraint name="ImplementsInheritance">
+          <ows:NoValues />
+          <ows:DefaultValue>true</ows:DefaultValue>
+        </ows:Constraint>
+        <ows:Constraint name="ImplementsRemoteResolve">
+          <ows:NoValues />
+          <ows:DefaultValue>false</ows:DefaultValue>
+        </ows:Constraint>
+        <ows:Constraint name="ImplementsResultPaging">
+          <ows:NoValues />
+          <ows:DefaultValue>false</ows:DefaultValue>
+        </ows:Constraint>
+        <ows:Constraint name="ImplementsStandardJoins">
+          <ows:NoValues />
+          <ows:DefaultValue>true</ows:DefaultValue>
+        </ows:Constraint>
+        <ows:Constraint name="ImplementsSpatialJoins">
+          <ows:NoValues />
+          <ows:DefaultValue>false</ows:DefaultValue>
+        </ows:Constraint>
+        <ows:Constraint name="ImplementsTemporalJoins">
+          <ows:NoValues />
+          <ows:DefaultValue>false</ows:DefaultValue>
+        </ows:Constraint>
+        <ows:Constraint name="ImplementsFeatureVersioning">
+          <ows:NoValues />
+          <ows:DefaultValue>true</ows:DefaultValue>
+        </ows:Constraint>
+        <ows:Constraint name="ManageStoredQueries">
+          <ows:NoValues />
+          <ows:DefaultValue>true</ows:DefaultValue>
+        </ows:Constraint>
+      </ows:OperationsMetadata>
+      <FeatureTypeList>
+        <FeatureType>
+          <Name>ns:Adopted_Roads</Name>
+          <Title>Adopted Roads</Title>
+          <Abstract>Location of Adopted Roads within Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.88125838765588 56.0790880313015</ows:LowerCorner>
+            <ows:UpperCorner>-3.58413531461174 56.2052507211374</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Alcohol_Prohibition_Areas</Name>
+          <Title>Alcohol Prohibition Areas</Title>
+          <Abstract>Areas banning the consumption of Alcohol within Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.8643391154159 56.0952297312765</ows:LowerCorner>
+            <ows:UpperCorner>-3.65344451720904 56.1777620957112</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Alloa_Town_Centre_Business_Improvement_District</Name>
+          <Title>Alloa Town Centre Business Improvement District</Title>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.79869114747362 56.1115489717258</ows:LowerCorner>
+            <ows:UpperCorner>-3.78470064406422 56.1176125546685</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Alloa_Town_Centre_Masterplan</Name>
+          <Title>Alloa Town Centre Masterplan</Title>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.79873612749908 56.1115568291524</ows:LowerCorner>
+            <ows:UpperCorner>-3.78399886196752 56.1185863707774</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Article_4_Areas</Name>
+          <Title>Article 4 Areas</Title>
+          <Abstract>The boundaries of Article 4 Areas within Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.80794520323155 56.1050701875638</ows:LowerCorner>
+            <ows:UpperCorner>-3.66447753538478 56.169317861721</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Business_Estates</Name>
+          <Title>Business Estates</Title>
+          <Abstract>The boundaries of Business/Industrial Estates within Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.85329748922258 56.0861295967241</ows:LowerCorner>
+            <ows:UpperCorner>-3.7027394062794 56.1554468132046</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Business_Land_Audit_2023</Name>
+          <Title>Business Land Audit 2023</Title>
+          <Abstract>Data used for the Clackmannanshire Business Land Audit</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.88199444659698 56.0784590485802</ows:LowerCorner>
+            <ows:UpperCorner>-3.62899121943384 56.1564406107362</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:CCTV_Cameras</Name>
+          <Title>CCTV Cameras</Title>
+          <Abstract>Locations of CCTV cameras within Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.83871683859321 56.1059474082152</ows:LowerCorner>
+            <ows:UpperCorner>-3.73739786893966 56.1538587030998</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Cemeteries___Burial_Grounds</Name>
+          <Title>Cemeteries &amp; Burial Grounds</Title>
+          <Abstract>Location of Cemeteries &amp; Burial Grounds within Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.83720951410257 56.1059174771737</ows:LowerCorner>
+            <ows:UpperCorner>-3.60839063527616 56.1910348232026</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Coal_Authority_-_Surface_Coal_Resources</Name>
+          <Title>Coal Authority - Surface Coal Resources</Title>
+          <Abstract>Data provided by the Coal Authority</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.82977722616044 56.0712612371212</ows:LowerCorner>
+            <ows:UpperCorner>-3.63333563718187 56.1727564277316</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Coal_Authority_-_Surface_Mining_Risk</Name>
+          <Title>Coal Authority - Surface Mining Risk</Title>
+          <Abstract>Data provided by the Coal Authority</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.75096780641879 56.1209964183677</ows:LowerCorner>
+            <ows:UpperCorner>-3.6354718747398 56.1559397293788</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Commercial_Centres</Name>
+          <Title>Commercial Centres</Title>
+          <Abstract>The boundaries of Commercial Centres within Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.77772272755458 56.1131634679273</ows:LowerCorner>
+            <ows:UpperCorner>-3.73323530565261 56.1509466247243</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Community_Councils</Name>
+          <Title>Community Councils</Title>
+          <Abstract>Community Council Boundaries within Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.88937732243688 56.0704703018647</ows:LowerCorner>
+            <ows:UpperCorner>-3.56659484155809 56.2200522206905</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Conservation_Areas</Name>
+          <Title>Conservation Areas</Title>
+          <Abstract>The boundaries of Conservation Areas within Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.80897644293757 56.096239014172</ows:LowerCorner>
+            <ows:UpperCorner>-3.60484220196083 56.1920248072949</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Core_Paths_links_to_neighbouring_Authorities</Name>
+          <Title>Core Paths links to neighbouring Authorities</Title>
+          <Abstract>Core Path links to neighbouring Local Authorities</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.88125156627904 56.0803060865116</ows:LowerCorner>
+            <ows:UpperCorner>-3.57834671243694 56.2054538386114</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Core_Paths_over_land</Name>
+          <Title>Core Paths over land</Title>
+          <Abstract>Core Paths over land within Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.88122875851796 56.0783665594474</ows:LowerCorner>
+            <ows:UpperCorner>-3.5782161471314 56.2058316911372</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Core_Paths_over_water</Name>
+          <Title>Core Paths over water</Title>
+          <Abstract>Core Paths over water within Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.75261716254383 56.1246913168915</ows:LowerCorner>
+            <ows:UpperCorner>-3.72986165625123 56.1310480586329</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Council_Title_Deeds</Name>
+          <Title>Council Title Deeds</Title>
+          <Abstract>Details of titles owned by the Council. THIS DATA IS NOT ACCURATE NOR UP TO DATE</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.87278935381455 56.0906604835248</ows:LowerCorner>
+            <ows:UpperCorner>-3.58453425049808 56.2004603784798</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Cycle_Paths</Name>
+          <Title>Cycle Paths</Title>
+          <Abstract>Local, Regional and National Cycle Paths within Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.88031722916504 56.0803272714819</ows:LowerCorner>
+            <ows:UpperCorner>-3.58454255339845 56.1868478146707</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Diffusion_Tubes</Name>
+          <Title>Diffusion Tubes</Title>
+          <Abstract>Location of air quality monitoring equipment in Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.79247356962334 56.1156219454276</ows:LowerCorner>
+            <ows:UpperCorner>-3.78077097960257 56.1234101807054</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Dog_Bins</Name>
+          <Title>Dog Bins</Title>
+          <Abstract>The location of Dog Bins In Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.85541919176242 56.1026119213666</ows:LowerCorner>
+            <ows:UpperCorner>-3.66520273556686 56.1690308842112</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Drainage_Connection</Name>
+          <Title>Drainage Connection</Title>
+          <Abstract>Drainage connection data from JBA</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.8728483697237 53.9396648931157</ows:LowerCorner>
+            <ows:UpperCorner>-2.07596711093849 56.2124231906961</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Drainage_Node</Name>
+          <Title>Drainage Node</Title>
+          <Abstract>Drainage node data from JBA</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-180 -89.9999</ows:LowerCorner>
+            <ows:UpperCorner>180 89.9999</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Electric_Vehicle_Charging_Points</Name>
+          <Title>Electric Vehicle Charging Points</Title>
+          <Abstract>The location of Electric Vehicle Charging Points within Clackmannanshire </Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.85327406441435 56.1116500359394</ows:LowerCorner>
+            <ows:UpperCorner>-3.61029927476146 56.1875404046521</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Energy_Storage_Sites</Name>
+          <Title>Energy Storage Sites</Title>
+          <Abstract>The location of energy storage sites within Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.77927208314421 56.1375987419901</ows:LowerCorner>
+            <ows:UpperCorner>-3.77651694204203 56.1392565307166</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Environmental_Health_Areas</Name>
+          <Title>Environmental Health Areas</Title>
+          <Abstract>Boundaries used in Environmental Health to divide Clackmananshire into managable areas</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.88932998626732 56.0704025525416</ows:LowerCorner>
+            <ows:UpperCorner>-3.56659406950388 56.2200521950724</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Estates_Asset_Register</Name>
+          <Title>Estates Asset Register</Title>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.88451374336433 56.0988101545787</ows:LowerCorner>
+            <ows:UpperCorner>-3.6081076132586 56.1909093031202</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Fibre_Optic_Cables</Name>
+          <Title>Fibre Optic Cables</Title>
+          <Abstract>Underground fibre cables in Clackmannahsire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.84439083716049 56.1077087044669</ows:LowerCorner>
+            <ows:UpperCorner>-3.77631613546456 56.1390185223422</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Forestry___Woodland_Strategy</Name>
+          <Title>Forestry &amp; Woodland Strategy</Title>
+          <Abstract>Data used for the joint Stirling &amp; Clackmannanshire Foresty &amp; Woodland Strategy</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-4.63953284648514 55.9513392302371</ows:LowerCorner>
+            <ows:UpperCorner>-3.56231006876264 56.5594704277734</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Greenbelts</Name>
+          <Title>Greenbelts</Title>
+          <Abstract>The boundaries of Greenbelt land within Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.87650550765612 56.0895339815779</ows:LowerCorner>
+            <ows:UpperCorner>-3.64387799469139 56.1745104025179</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Grit_Bins</Name>
+          <Title>Grit Bins</Title>
+          <Abstract>The location of Grit Bins within Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.85653157336172 56.0994679834804</ows:LowerCorner>
+            <ows:UpperCorner>-3.60653360488671 56.189853426694</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Gritting_-_Footpath</Name>
+          <Title>Gritting - Footpath</Title>
+          <Abstract>The footpath gritting routes within Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.86320381997493 56.0967463883182</ows:LowerCorner>
+            <ows:UpperCorner>-3.60656343790718 56.189899320746</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Gritting_-_Road</Name>
+          <Title>Gritting - Road</Title>
+          <Abstract>The gritting priority routes within Clackmannahsire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.87360783094142 56.0730616622378</ows:LowerCorner>
+            <ows:UpperCorner>-3.57948599109639 56.205275915879</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Grounds_Maintenance_Areas</Name>
+          <Title>Grounds Maintenance Areas</Title>
+          <Abstract>Areas of Council maintained ground within Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.86489117662942 56.1007444740634</ows:LowerCorner>
+            <ows:UpperCorner>-3.60618019655407 56.1914753332871</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Grounds_Maintenance_Lines</Name>
+          <Title>Grounds Maintenance Lines</Title>
+          <Abstract>The location of Council maintained ground within Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.85733026956772 56.1025327268429</ows:LowerCorner>
+            <ows:UpperCorner>-3.60805395763264 56.1914517757671</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Grounds_Maintenance_Points</Name>
+          <Title>Grounds Maintenance Points</Title>
+          <Abstract>The location of Council maintained ground within Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.86220732744641 56.1013363564781</ows:LowerCorner>
+            <ows:UpperCorner>-3.60627249267044 56.191252716987</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Housing_Land_Audit_2023</Name>
+          <Title>Housing Land Audit 2023</Title>
+          <Abstract>Latest HLA as submitted to SG</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.85696661042786 56.103248853664</ows:LowerCorner>
+            <ows:UpperCorner>-3.60332957275759 56.1901840887084</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Hydro_Energy_Sites</Name>
+          <Title>Hydro Energy Sites</Title>
+          <Abstract>The location of Hydro Energy Sites within Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.72340522830895 56.1603434236849</ows:LowerCorner>
+            <ows:UpperCorner>-3.60360947655914 56.1718289668279</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:LDP_Business_Sites</Name>
+          <Title>LDP Business Sites</Title>
+          <Abstract>The boundaries of the 2015 LDP Business Sites within Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.88199444659698 56.0784590485802</ows:LowerCorner>
+            <ows:UpperCorner>-3.62899121943384 56.1564406107362</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:LDP_Environmental_Improvement_Sites</Name>
+          <Title>LDP Environmental Improvement Sites</Title>
+          <Abstract>The boundaries of the 2015 LDP Environmental Improvement Sites within Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.67382902922131 56.1246365808316</ows:LowerCorner>
+            <ows:UpperCorner>-3.64791798061579 56.1338297132497</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:LDP_Housing_Sites</Name>
+          <Title>LDP Housing Sites</Title>
+          <Abstract>The boundaries of the 2015 LDP Housing Sites within Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.85696661042786 56.1051424432211</ows:LowerCorner>
+            <ows:UpperCorner>-3.60340836192228 56.1901840887084</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:LDP_Mixed_Use_Sites</Name>
+          <Title>LDP Mixed Use Sites</Title>
+          <Abstract>The boundaries of the 2015 LDP Mixed Use Sites within Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.83579969232372 56.1061953787981</ows:LowerCorner>
+            <ows:UpperCorner>-3.74285292715389 56.1558550976527</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:LDP_Opportunity_Sites</Name>
+          <Title>LDP Opportunity Sites</Title>
+          <Abstract>The location of the 2015 LDP Opportunity Sites within Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.83941271012668 56.1066134501328</ows:LowerCorner>
+            <ows:UpperCorner>-3.66240229067145 56.1613493492982</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:LDP_Safeguarded_Open_Space</Name>
+          <Title>LDP Safeguarded Open Space</Title>
+          <Abstract>The boundaries of the 2015 LDP Safeguarded Open Space Sites within Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.8644151304443 56.1017983260501</ows:LowerCorner>
+            <ows:UpperCorner>-3.60744770250099 56.1914593535205</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:LDP_School_Campus</Name>
+          <Title>LDP School Campus</Title>
+          <Abstract>The boundaries of the 2015 LDP School Campus Sites within Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.85412766524157 56.1023678594131</ows:LowerCorner>
+            <ows:UpperCorner>-3.61558758956503 56.1818575950057</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:LDP_Social_Infrastructure_Sites</Name>
+          <Title>LDP Social Infrastructure Sites</Title>
+          <Abstract>The boundaries of the 2015 LDP Social Infrastructure Sites within Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.81725606859462 56.1092804363054</ows:LowerCorner>
+            <ows:UpperCorner>-3.66861720509649 56.1673470686453</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:LDP_Sub_Areas</Name>
+          <Title>LDP Sub Areas</Title>
+          <Abstract>The Sub Area boundaries used in the Clackmannanshire Council 2015 Local Developement Plan</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.88937732243688 56.0704703018647</ows:LowerCorner>
+            <ows:UpperCorner>-3.56659484155809 56.2200522206905</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:LDP_Transport_Improvement_Sites</Name>
+          <Title>LDP Transport Improvement Sites</Title>
+          <Abstract>The Transport Improvement routes used in the Clackmannanshire Council 2015 Local Developement Plan</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.87777811504263 56.0974725848773</ows:LowerCorner>
+            <ows:UpperCorner>-3.58485938313738 56.2052544643027</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:LDP_Transport_Sites</Name>
+          <Title>LDP Transport Sites</Title>
+          <Abstract>The Transport Site boundaries used in the Clackmannanshire Council 2015 Local Developement Plan</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.79200432481799 56.1176516322164</ows:LowerCorner>
+            <ows:UpperCorner>-3.78928712594911 56.1185138423691</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Land_Ownership</Name>
+          <Title>Land Ownership</Title>
+          <Abstract>Details of land ownership (both Council and Private) in Clackmannanshire. THIS DATA IS NOT ACCURATE OR UP TO DATE</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.90366708948629 56.071733506542</ows:LowerCorner>
+            <ows:UpperCorner>-3.55555078880338 56.2323081399817</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Leisure_Facilities</Name>
+          <Title>Leisure Facilities</Title>
+          <Abstract>Leisure Facilities within Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.85566333007674 56.102699916408</ows:LowerCorner>
+            <ows:UpperCorner>-3.60431334975722 56.2244267891353</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Libraries</Name>
+          <Title>Libraries</Title>
+          <Abstract>The location on Libraries and CAPs within Clackmannashire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.85157275559192 56.1058235111244</ows:LowerCorner>
+            <ows:UpperCorner>-3.66665707867233 56.1618275424163</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Listed_Buildings</Name>
+          <Title>Listed Buildings</Title>
+          <Abstract>The boundaries of Listed Buildings within Clackmannanshire. This data is managed by Historic Environment Scotland</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.86217944724487 56.0798100122278</ows:LowerCorner>
+            <ows:UpperCorner>-3.59103428424146 56.1995780094582</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Litter_Bins</Name>
+          <Title>Litter Bins</Title>
+          <Abstract>The location of Litter Bins in Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.85570440175839 56.1027919229329</ows:LowerCorner>
+            <ows:UpperCorner>-3.61201431749592 56.187857207111</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Local_Authority_Boundary</Name>
+          <Title>Local Authority Boundary</Title>
+          <Abstract>Clackmannanshire Council Boundary</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.88933001388588 56.0704025525416</ows:LowerCorner>
+            <ows:UpperCorner>-3.56659406950388 56.2200527563779</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Local_Nature_Conservation_Sites</Name>
+          <Title>Local Nature Conservation Sites</Title>
+          <Abstract>Local Nature Conservation Sites provided by TWIC</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.88813858789124 56.1017698070702</ows:LowerCorner>
+            <ows:UpperCorner>-3.59538903503857 56.2142614241594</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Met_Office_Safeguarding_Zone</Name>
+          <Title>Met Office Safeguarding Zone</Title>
+          <Abstract>Data from Met Office for planning consultation process</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.6417733359586 56.0313816405463</ows:LowerCorner>
+            <ows:UpperCorner>-2.98474910140855 56.397491317659</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Network_Rail_Ownership_Buffer</Name>
+          <Title>Network Rail Ownership Buffer</Title>
+          <Abstract>Ownership boundary information from Network Rail</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.88843514039455 56.0825760746024</ows:LowerCorner>
+            <ows:UpperCorner>-3.71886188033881 56.134675709133</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Pedestrian_Crossings</Name>
+          <Title>Pedestrian Crossings</Title>
+          <Abstract>All types of crossings in Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.86056115103277 56.1040400897261</ows:LowerCorner>
+            <ows:UpperCorner>-3.66841682905771 56.1629977275453</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Polling_Districts</Name>
+          <Title>Polling Districts</Title>
+          <Abstract>The Polling District boundaries used for voting purposes within Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.88932998626732 56.0704025525416</ows:LowerCorner>
+            <ows:UpperCorner>-3.56659406950388 56.2200521950724</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Polling_Places</Name>
+          <Title>Polling Places</Title>
+          <Abstract>The location of Polling Places within Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.852775212253 56.1058021843466</ows:LowerCorner>
+            <ows:UpperCorner>-3.61062964390203 56.1875390564457</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Potentially_Contaminated_Land_-_Lines</Name>
+          <Title>Potentially Contaminated Land - Lines</Title>
+          <Abstract>The location of potentially contaminated land within Clackmananshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.90245996909305 56.0773108254734</ows:LowerCorner>
+            <ows:UpperCorner>-3.59072304760663 56.1993312531616</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Potentially_Contaminated_Land_-_Points</Name>
+          <Title>Potentially Contaminated Land - Points</Title>
+          <Abstract>The location of potentially contaminated land within Clackmananshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.88400878310461 56.0780933315143</ows:LowerCorner>
+            <ows:UpperCorner>-3.59361557513284 56.2013270621874</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Potentially_Contaminated_Land_-_Polygons</Name>
+          <Title>Potentially Contaminated Land - Polygons</Title>
+          <Abstract>The location of potentially contaminated land within Clackmananshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.8963923784887 56.0688453324036</ows:LowerCorner>
+            <ows:UpperCorner>-3.59333847911016 56.180948427227</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Primary_School_Catchments</Name>
+          <Title>Primary School Catchments</Title>
+          <Abstract>Catchment boundaries for the Non-Denominational Primary Schools in Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.88932998626732 56.0704019913195</ows:LowerCorner>
+            <ows:UpperCorner>-3.5665940467224 56.2200521950724</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Primary_Schools</Name>
+          <Title>Primary Schools</Title>
+          <Abstract>The location of the Primary Schools within Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.85304977706068 56.1032286733039</ows:LowerCorner>
+            <ows:UpperCorner>-3.6163025277879 56.1811128197529</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Private_Water_Supplies</Name>
+          <Title>Private Water Supplies</Title>
+          <Abstract>The location of Private Water Supply Sources within Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.84970340882679 56.1485679681701</ows:LowerCorner>
+            <ows:UpperCorner>-3.59676173658791 56.2005223000707</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Recycling_Points</Name>
+          <Title>Recycling Points</Title>
+          <Abstract>The location of Community Recycling Points within Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.85408631354783 56.1042381800799</ows:LowerCorner>
+            <ows:UpperCorner>-3.61010302929431 56.1877084377092</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Road_Polygons</Name>
+          <Title>Road Polygons</Title>
+          <Abstract>Polygonised roads within Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.88121498777838 56.0802942202916</ows:LowerCorner>
+            <ows:UpperCorner>-3.58407990844674 56.2052807000243</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Roman_Catholic_Primary_School_Catchments</Name>
+          <Title>Roman Catholic Primary School Catchments</Title>
+          <Abstract>Catchment boundaries for the RC Primary Schools in Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.88932948269103 56.0704025601985</ows:LowerCorner>
+            <ows:UpperCorner>-3.56659406950388 56.2200521950724</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Roman_Catholic_Secondary_School_Catchments</Name>
+          <Title>Roman Catholic Secondary School Catchments</Title>
+          <Abstract>Catchment boundaries for the RC Secondary Schools in Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.88933001388588 56.0704025525416</ows:LowerCorner>
+            <ows:UpperCorner>-3.56659406950388 56.2200527563779</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:SUDS_Connection</Name>
+          <Title>SUDS Connection</Title>
+          <Abstract>SUDS connection data from JBA</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.86096224128556 56.1458071571867</ows:LowerCorner>
+            <ows:UpperCorner>-3.84792586447475 56.1517332972223</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:SUDS_Node</Name>
+          <Title>SUDS Node</Title>
+          <Abstract>SUDS node data from JBA</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.86096321883383 56.1458071571867</ows:LowerCorner>
+            <ows:UpperCorner>-3.84686420176389 56.151769380621</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Scottish_Parliament_Constituency</Name>
+          <Title>Scottish Parliament Constituency</Title>
+          <Abstract>The Scottish Parliament Constituency boundaries within Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-4.02056212981901 56.0683699574567</ows:LowerCorner>
+            <ows:UpperCorner>-3.56659206221478 56.2562456587276</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Secondary_School_Catchments</Name>
+          <Title>Secondary School Catchments</Title>
+          <Abstract>Catchment boundaries for the Non-Denominational Secondary Schools in Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.88932948269103 56.0704025601985</ows:LowerCorner>
+            <ows:UpperCorner>-3.56659406950388 56.2200521950724</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Secondary_Schools</Name>
+          <Title>Secondary Schools</Title>
+          <Abstract>The location of the Secondary Schools within Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.81649363201675 56.1085810710443</ows:LowerCorner>
+            <ows:UpperCorner>-3.79045670799863 56.150223339901</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Settlement_Boundaries</Name>
+          <Title>Settlement Boundaries</Title>
+          <Abstract>The Settlement Boundaries within Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.86441997656782 56.096644571593</ows:LowerCorner>
+            <ows:UpperCorner>-3.60305695606944 56.1916137434108</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Smoke_Control_Areas</Name>
+          <Title>Smoke Control Areas</Title>
+          <Abstract>Areas restricting the emission of non-authorised fuel (e.g. coal) and open fires</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.85243478174291 56.116886231616</ows:LowerCorner>
+            <ows:UpperCorner>-3.80079659824447 56.1393736195778</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Solar_Energy_Sites</Name>
+          <Title>Solar Energy Sites</Title>
+          <Abstract>Solar Energy Sites within Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.81476130540142 56.1417118916249</ows:LowerCorner>
+            <ows:UpperCorner>-3.70275004746433 56.1472475018587</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Special_Landscape_Areas</Name>
+          <Title>Special Landscape Areas</Title>
+          <Abstract>The boundaries of Special Landscape Area within Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.88104259982077 56.0974238399392</ows:LowerCorner>
+            <ows:UpperCorner>-3.59192590619306 56.2197406594276</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Speed_Limits</Name>
+          <Title>Speed Limits</Title>
+          <Abstract>Speed limits on roads within Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.87785670721711 56.0803512502786</ows:LowerCorner>
+            <ows:UpperCorner>-3.58415595523972 56.2052763550143</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Street_Lighting_Columns</Name>
+          <Title>Street Lighting Columns</Title>
+          <Abstract>Street lights within Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.86903551888657 56.0962911483869</ows:LowerCorner>
+            <ows:UpperCorner>-3.60068145380268 56.1955668575273</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:TWIC_-_Invasive_Species</Name>
+          <Title>TWIC - Invasive Species</Title>
+          <Abstract>Data Supplied by The Wildlife Information Centre (TWIC)</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-4.61645690474121 55.9886691800859</ows:LowerCorner>
+            <ows:UpperCorner>-3.64229409619573 56.4090637827395</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:TWIC_-_Notable_Species</Name>
+          <Title>TWIC - Notable Species</Title>
+          <Abstract>Data Supplied by The Wildlife Information Centre (TWIC)</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.88623635159136 56.0749780828423</ows:LowerCorner>
+            <ows:UpperCorner>-3.5793632164706 56.2139007431928</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Timber_Transport_Routes</Name>
+          <Title>Timber Transport Routes</Title>
+          <Abstract>Agreed routes for timber vehicles</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.87782020781289 56.0803826508504</ows:LowerCorner>
+            <ows:UpperCorner>-3.58415722272346 56.2052505352006</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Town_Centres</Name>
+          <Title>Town Centres</Title>
+          <Abstract>The boundaries of Town Centres within Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.85584399951402 56.1053897060199</ows:LowerCorner>
+            <ows:UpperCorner>-3.66799504818799 56.1634150448541</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Traffic_Signals</Name>
+          <Title>Traffic Signals</Title>
+          <Abstract>The location of Traffic Signals within Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.77718956209408 56.1294960996929</ows:LowerCorner>
+            <ows:UpperCorner>-3.77718884344185 56.1294968183452</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Tree_Preservation_Orders</Name>
+          <Title>Tree Preservation Orders</Title>
+          <Abstract>The boundaries of Tree Preservation Orders within Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.84923703518657 56.1010565432656</ows:LowerCorner>
+            <ows:UpperCorner>-3.66669221736517 56.1719811918717</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Vacant___Derelict_Land_Survey</Name>
+          <Title>Vacant &amp; Derelict Land Survey</Title>
+          <Abstract>Sites used in the Vacant and Derelict Land Audit</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.84051893628456 56.086321896376</ows:LowerCorner>
+            <ows:UpperCorner>-3.70213102671343 56.1577362324042</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:War_Memorials</Name>
+          <Title>War Memorials</Title>
+          <Abstract>Location of War Memorials within Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.85594959785529 56.1078761455438</ows:LowerCorner>
+            <ows:UpperCorner>-3.61101969917397 56.1875738428109</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Ward_Boundaries</Name>
+          <Title>Ward Boundaries</Title>
+          <Abstract>The Ward Boundaries within Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.88932998626732 56.0704025525416</ows:LowerCorner>
+            <ows:UpperCorner>-3.56659406950388 56.2200521950724</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Westminster_Parliamentary_Constituency_Boundaries_2023</Name>
+          <Title>Westminster Parliamentary Constituency Boundaries 2023</Title>
+          <Abstract>The Westminster Parliamentary Constituency boundaries  within Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.89938537572082 55.9945685075146</ows:LowerCorner>
+            <ows:UpperCorner>-3.38483846076153 56.2222072103851</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Wind_Energy_Sites</Name>
+          <Title>Wind Energy Sites</Title>
+          <Abstract>Wind Energy Sites within Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-180 -89.9999</ows:LowerCorner>
+            <ows:UpperCorner>180 89.9999</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+        <FeatureType>
+          <Name>ns:Wind_Energy_Turbines</Name>
+          <Title>Wind Energy Turbines</Title>
+          <Abstract>Wind Energy Turbines within Clackmannanshire</Abstract>
+          <DefaultCRS>urn:ogc:def:crs:EPSG::27700</DefaultCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::3857</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4277</OtherCRS>
+          <OtherCRS>urn:ogc:def:crs:EPSG::4326</OtherCRS>
+          <ows:WGS84BoundingBox>
+            <ows:LowerCorner>-3.86901123320679 56.0932176875309</ows:LowerCorner>
+            <ows:UpperCorner>-3.60500383763349 56.2162004239717</ows:UpperCorner>
+          </ows:WGS84BoundingBox>
+        </FeatureType>
+      </FeatureTypeList>
+      <fes:Filter_Capabilities>
+        <fes:Conformance>
+          <fes:Constraint name="ImplementsAdHocQuery">
+            <ows:NoValues />
+            <ows:DefaultValue>true</ows:DefaultValue>
+          </fes:Constraint>
+          <fes:Constraint name="ImplementsExtendedOperators">
+            <ows:NoValues />
+            <ows:DefaultValue>false</ows:DefaultValue>
+          </fes:Constraint>
+          <fes:Constraint name="ImplementsFunctions">
+            <ows:NoValues />
+            <ows:DefaultValue>false</ows:DefaultValue>
+          </fes:Constraint>
+          <fes:Constraint name="ImplementsMinSpatialFilter">
+            <ows:NoValues />
+            <ows:DefaultValue>true</ows:DefaultValue>
+          </fes:Constraint>
+          <fes:Constraint name="ImplementsMinStandardFilter">
+            <ows:NoValues />
+            <ows:DefaultValue>true</ows:DefaultValue>
+          </fes:Constraint>
+          <fes:Constraint name="ImplementsMinTemporalFilter">
+            <ows:NoValues />
+            <ows:DefaultValue>true</ows:DefaultValue>
+          </fes:Constraint>
+          <fes:Constraint name="ImplementsQuery">
+            <ows:NoValues />
+            <ows:DefaultValue>true</ows:DefaultValue>
+          </fes:Constraint>
+          <fes:Constraint name="ImplementsSorting">
+            <ows:NoValues />
+            <ows:DefaultValue>false</ows:DefaultValue>
+          </fes:Constraint>
+          <fes:Constraint name="ImplementsSpatialFilter">
+            <ows:NoValues />
+            <ows:DefaultValue>true</ows:DefaultValue>
+          </fes:Constraint>
+          <fes:Constraint name="ImplementsStandardFilter">
+            <ows:NoValues />
+            <ows:DefaultValue>true</ows:DefaultValue>
+          </fes:Constraint>
+          <fes:Constraint name="ImplementsTemporalFilter">
+            <ows:NoValues />
+            <ows:DefaultValue>true</ows:DefaultValue>
+          </fes:Constraint>
+          <fes:Constraint name="ImplementsVersionNav">
+            <ows:NoValues />
+            <ows:DefaultValue>false</ows:DefaultValue>
+          </fes:Constraint>
+        </fes:Conformance>
+        <fes:Scalar_Capabilities>
+          <fes:LogicalOperators />
+          <fes:ComparisonOperators>
+            <fes:ComparisonOperator name="PropertyIsEqualTo" />
+            <fes:ComparisonOperator name="PropertyIsGreaterThan" />
+            <fes:ComparisonOperator name="PropertyIsGreaterThanOrEqualTo" />
+            <fes:ComparisonOperator name="PropertyIsLessThan" />
+            <fes:ComparisonOperator name="PropertyIsLessThanOrEqualTo" />
+            <fes:ComparisonOperator name="PropertyIsLike" />
+            <fes:ComparisonOperator name="PropertyIsBetween" />
+          </fes:ComparisonOperators>
+        </fes:Scalar_Capabilities>
+        <fes:Spatial_Capabilities>
+          <fes:GeometryOperands>
+            <fes:GeometryOperand name="gml:Envelope" xmlns:gml="http://www.opengis.net/gml/3.2" />
+            <fes:GeometryOperand name="gml:Point" xmlns:gml="http://www.opengis.net/gml/3.2" />
+            <fes:GeometryOperand name="gml:LinearRing" xmlns:gml="http://www.opengis.net/gml/3.2" />
+            <fes:GeometryOperand name="gml:LineString" xmlns:gml="http://www.opengis.net/gml/3.2" />
+            <fes:GeometryOperand name="gml:Polygon" xmlns:gml="http://www.opengis.net/gml/3.2" />
+            <fes:GeometryOperand name="gml:Arc" xmlns:gml="http://www.opengis.net/gml/3.2" />
+            <fes:GeometryOperand name="gml:Circle" xmlns:gml="http://www.opengis.net/gml/3.2" />
+          </fes:GeometryOperands>
+          <fes:SpatialOperators>
+            <fes:SpatialOperator name="BBOX" />
+            <fes:SpatialOperator name="Equals" />
+            <fes:SpatialOperator name="Disjoint" />
+            <fes:SpatialOperator name="Intersects" />
+            <fes:SpatialOperator name="Touches" />
+            <fes:SpatialOperator name="Crosses" />
+            <fes:SpatialOperator name="Within" />
+            <fes:SpatialOperator name="Contains" />
+            <fes:SpatialOperator name="Overlaps" />
+            <fes:SpatialOperator name="DWithin" />
+            <fes:SpatialOperator name="Beyond" />
+          </fes:SpatialOperators>
+        </fes:Spatial_Capabilities>
+      </fes:Filter_Capabilities>
+    </WFS_Capabilities>
+  </Metadata>
+</PAMDataset>

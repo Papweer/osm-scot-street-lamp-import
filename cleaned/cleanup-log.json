@@ -1,0 +1,58 @@
+{
+  "clackmannanshire": {
+    "source records": 11398,
+    "removed: end-dated": 1677,
+    "removed: not a street lamp": 9,
+    "removed: placeholder positions": 0,
+    "merged: points less than 1 m apart": 35,
+    "removed: same ref within 10 m": 3,
+    "output records": 9674
+  },
+  "dundee": {
+    "source records": 25928,
+    "removed: placeholder positions": 0,
+    "merged: points less than 1 m apart": 158,
+    "output records": 25770
+  },
+  "falkirk": {
+    "source records": 28838,
+    "removed: not a street lamp": 2,
+    "removed: placeholder positions": 0,
+    "merged: points less than 1 m apart": 99,
+    "removed: same ref within 10 m": 0,
+    "output records": 28737
+  },
+  "glasgow": {
+    "source records": 80646,
+    "removed: placeholder positions": 165,
+    "merged: points less than 1 m apart": 831,
+    "output records": 79650
+  },
+  "moray": {
+    "source records": 19407,
+    "removed: placeholder positions": 0,
+    "merged: points less than 1 m apart": 207,
+    "output records": 19200
+  },
+  "orkney": {
+    "source records": 3677,
+    "removed: not a street lamp": 222,
+    "removed: placeholder positions": 0,
+    "merged: points less than 1 m apart": 0,
+    "output records": 3455
+  },
+  "perth-and-kinross": {
+    "source records": 25650,
+    "removed: placeholder positions": 0,
+    "merged: points less than 1 m apart": 30,
+    "removed: same ref within 10 m": 0,
+    "output records": 25620
+  },
+  "stirling": {
+    "source records": 15668,
+    "removed: placeholder positions": 0,
+    "merged: points less than 1 m apart": 20,
+    "removed: same ref within 10 m": 0,
+    "output records": 15648
+  }
+}
