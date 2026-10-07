@@ -72,7 +72,6 @@ for council, (operator, wikidata) in operators.items():
         properties = {
             'highway': 'street_lamp',
             'light_source': 'lantern',
-            'support': 'pole',
             'operator': operator,
             'operator:wikidata': wikidata,
         }
@@ -82,6 +81,11 @@ for council, (operator, wikidata) in operators.items():
             ref = source[refField]
             if re.fullmatch(refPattern, ref) and refCounts[ref] == 1: # Drops e.g. MISSING, CUT OFF
                 properties['ref'] = ref
+            if council in ['clackmannanshire', 'falkirk']: # Wall lights are numbered W0001..., underpass lights U0001...
+                if ref.startswith('W0'):
+                    properties['support'] = 'wall_mounted'
+                elif not ref.startswith('U0'):
+                    properties['support'] = 'pole'
 
         match council:
             case 'clackmannanshire':
@@ -96,8 +100,8 @@ for council, (operator, wikidata) in operators.items():
                 if source['Height'] != '1': # 1m is not a valid street lamp height
                     properties['height'] = source['Height']
 
-                if source['Site_Posit'] == 'Wall mounted':
-                    properties['support'] = 'wall_mounted'
+                # Site_Posit marks the wall mounted lamps, so the rest are columns
+                properties['support'] = 'wall_mounted' if source['Site_Posit'] == 'Wall mounted' else 'pole'
 
             case 'orkney':
                 properties['support'] = orkneySupports[source['COLUMN_TYP']]
